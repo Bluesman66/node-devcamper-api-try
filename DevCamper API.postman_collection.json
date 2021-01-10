@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c4f72c75-b48c-4521-b967-82ebd569b354",
+		"_postman_id": "55e88ebc-df75-4b0e-966f-a27533b4af5d",
 		"name": "DevCamper API",
 		"description": "Backend API for the DevCamper application to manage bootcamps, cources, reviews, users and authentication",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -150,6 +150,30 @@
 				}
 			],
 			"description": "Bootcamps CRUD functionality"
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/courses",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
