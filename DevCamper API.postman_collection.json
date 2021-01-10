@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "55e88ebc-df75-4b0e-966f-a27533b4af5d",
+		"_postman_id": "dfb14b96-996d-412d-85b3-3d0a6498d539",
 		"name": "DevCamper API",
 		"description": "Backend API for the DevCamper application to manage bootcamps, cources, reviews, users and authentication",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -51,6 +51,62 @@
 					"response": []
 				},
 				{
+					"name": "Get Bootcamps Within A Radius",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/radius/08204/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"radius",
+								"08204",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Bootcamp",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update Bootcamp",
 					"request": {
 						"method": "PUT",
@@ -91,62 +147,6 @@
 						"description": "Delete single bootcamp from database."
 					},
 					"response": []
-				},
-				{
-					"name": "Create New Bootcamp",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"content-type": true
-						}
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"bootcamps"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Bootcamps Within A Radius",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps/radius/08204/10",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"bootcamps",
-								"radius",
-								"08204",
-								"10"
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"description": "Bootcamps CRUD functionality"
@@ -167,6 +167,27 @@
 							"path": [
 								"api",
 								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courses For Bootcamp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/courses",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"5d725a1b7b292f5f8ceff788",
 								"courses"
 							]
 						}
