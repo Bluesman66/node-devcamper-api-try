@@ -16,10 +16,16 @@
 						"header": [],
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps",
-							"host": ["{{URL}}"],
-							"path": ["api", "v1", "bootcamps"]
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
 						},
-						"description": "Fetch all bootcamps from database."
+						"description": "Fetch all bootcamps from database. "
 					},
 					"response": []
 				},
@@ -30,24 +36,17 @@
 						"header": [],
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps/1",
-							"host": ["{{URL}}"],
-							"path": ["api", "v1", "bootcamps", "1"]
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
 						},
 						"description": "Get single bootcamp by ID."
-					},
-					"response": []
-				},
-				{
-					"name": "Create New Bootcamp",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "{{URL}}/api/v1/bootcamps",
-							"host": ["{{URL}}"],
-							"path": ["api", "v1", "bootcamps"]
-						},
-						"description": "Add new bootcamp to database."
 					},
 					"response": []
 				},
@@ -58,8 +57,15 @@
 						"header": [],
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps/1",
-							"host": ["{{URL}}"],
-							"path": ["api", "v1", "bootcamps", "1"]
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
 						},
 						"description": "Update single bootcamp in database."
 					},
@@ -72,10 +78,73 @@
 						"header": [],
 						"url": {
 							"raw": "{{URL}}/api/v1/bootcamps/1",
-							"host": ["{{URL}}"],
-							"path": ["api", "v1", "bootcamps", "1"]
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"1"
+							]
 						},
 						"description": "Delete single bootcamp from database."
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Bootcamp",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bootcamps Within A Radius",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/radius/08204/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"radius",
+								"08204",
+								"10"
+							]
+						}
 					},
 					"response": []
 				}
