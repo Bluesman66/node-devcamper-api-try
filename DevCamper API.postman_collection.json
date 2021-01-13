@@ -147,6 +147,27 @@
 						"description": "Delete single bootcamp from database."
 					},
 					"response": []
+				},
+				{
+					"name": "Upload photo for bootcamp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/photo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"5d725a1b7b292f5f8ceff788",
+								"photo"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"description": "Bootcamps CRUD functionality"
